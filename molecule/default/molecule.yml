@@ -11,6 +11,8 @@ platforms:
   - name: ${MOLECULE_DISTRO}
     image: ${MOLECULE_DISTRO}
     privileged: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
 provisioner:
   name: ansible
   lint:
