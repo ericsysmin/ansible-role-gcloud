@@ -12,6 +12,9 @@ env:
     - ROLE_NAME: gcloud
   matrix:
     - MOLECULE_DISTRO: debian:stretch
+    - MOLECULE_DISTRO: ubuntu:trusty
+    - MOLECULE_DISTRO: ubuntu:xenial
+    - MOLECULE_DISTRO: ubuntu:bionic
 
 install:
   - pip install molecule docker
