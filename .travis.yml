@@ -8,5 +8,6 @@ before_install:
 install:
   - pip install molecule
   - pip install docker
+  - mv /home/travis/build/ericsysmin/ansible-role-gcloud /home/travis/build/ericsysmin/ericsysmin.gcloud
 script:
   - molecule test
