@@ -1,4 +1,6 @@
+---
 galaxy_info:
+  role_name: gcloud
   author: Eric Anderson
   description: Role to install gcloud
   company: Avi Networks
