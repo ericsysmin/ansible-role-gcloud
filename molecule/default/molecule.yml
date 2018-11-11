@@ -5,11 +5,12 @@ driver:
   name: docker
 lint:
   name: yamllint
+  options:
+    config-file: molecule/default/yaml-lint.yml
 platforms:
-  - name: instance
-    image: debian:stretch
-  - name: instance
-    image: centos:7
+  - name: ${MOLECULE_DISTRO}
+    image: ${MOLECULE_DISTRO}
+    privileged: true
 provisioner:
   name: ansible
   lint:
