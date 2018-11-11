@@ -6,9 +6,9 @@ driver:
 lint:
   name: yamllint
   options:
-    config-file: molecule/default/yaml-lint.yml
+    config-file: molecule/default/.yamllint
 platforms:
-  - name: ${MOLECULE_DISTRO}
+  - name: instance
     image: ${MOLECULE_DISTRO}
     privileged: true
     volumes:
