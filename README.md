@@ -33,4 +33,4 @@ Apache 2.0
 
 ## Author Information
 
-Eric Anderson
+[ericsysmin](https://ericsysmin.com)
