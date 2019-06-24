@@ -17,7 +17,7 @@ env:
     - MOLECULE_DISTRO: ubuntu:bionic
 
 install:
-  - pip install molecule docker
+  - pip install testinfra molecule docker
 
 before_script:
   - cd ../
