@@ -12,9 +12,17 @@ env:
     - ROLE_NAME: gcloud
   matrix:
     - MOLECULE_DISTRO: debian:stretch
+    - MOLECULE_DISTRO: debian:stretch
+      MOLECULE_PLAYBOOK: archive_playbook.yml
     - MOLECULE_DISTRO: ubuntu:trusty
+    - MOLECULE_DISTRO: ubuntu:trusty
+      MOLECULE_PLAYBOOK: archive_playbook.yml
     - MOLECULE_DISTRO: ubuntu:xenial
+    - MOLECULE_DISTRO: ubuntu:xenial
+      MOLECULE_PLAYBOOK: archive_playbook.yml
     - MOLECULE_DISTRO: ubuntu:bionic
+    - MOLECULE_DISTRO: ubuntu:bionic
+      MOLECULE_PLAYBOOK: archive_playbook.yml
 
 install:
   - pip install testinfra molecule docker
