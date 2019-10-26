@@ -1,6 +1,7 @@
 ---
 dependency:
   name: galaxy
+  requirements_file: molecule/default/requirements.yml
 driver:
   name: docker
 lint:
@@ -9,7 +10,7 @@ lint:
     config-file: molecule/default/.yamllint
 platforms:
   - name: instance
-    image: ${MOLECULE_DISTRO}
+    image: ${MOLECULE_DISTRO:-ubuntu:bionic}
     privileged: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
@@ -19,6 +20,8 @@ provisioner:
     name: ansible-lint
     options:
       c: molecule/default/.ansible-lint
+  playbooks:
+    converge: ${MOLECULE_PLAYBOOK:-package_playbook.yml}
 scenario:
   name: default
 verifier:

@@ -6,4 +6,7 @@
       apt: name=gnupg2
       when: ansible_os_family|lower == "debian"
   roles:
+    - role: ericsysmin.epel
     - role: ericsysmin.gcloud
+      gcloud_install_type: archive
+      gcloud_command_completion: true
