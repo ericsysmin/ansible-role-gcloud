@@ -2,7 +2,7 @@
 galaxy_info:
   role_name: gcloud
   author: Eric Anderson
-  description: Role to install gcloud
+  description: Ansible role to install google-cloud-sdk
   company: Avi Networks
   license: MIT
   min_ansible_version: 2.4
@@ -13,5 +13,9 @@ galaxy_info:
         - trusty
         - xenial
         - bionic
-  galaxy_tags: []
+  galaxy_tags:
+    - gcloud
+    - google
+    - cloud
+    - sdk
 dependencies: []

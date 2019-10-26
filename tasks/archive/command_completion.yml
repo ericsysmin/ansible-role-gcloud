@@ -1,0 +1,17 @@
+---
+# task file to configure bash completion for gcloud
+- name: gcloud | Archive | Ensure bash completion is installed
+  apt: name=bash-completion
+
+- name: gcloud | Archive | Ensure bash_completion.d directory exists
+  file:
+    path: /etc/bash_completion.d
+    owner: root
+    group: root
+    state: directory
+
+- name: gcloud | Archive | Link binaries to /usr/bin (like package install)
+  file:
+    src: "{{ gcloud_library_path }}/completion.bash.inc"
+    dest: /etc/bash_completion.d/gcloud
+    state: link
