@@ -22,7 +22,6 @@
     - gsutil
   when: not gcloud_install_script
 
-
 - name: gcloud | Archive | Add command completion
   include_tasks: command_completion.yml
   when: gcloud_command_completion

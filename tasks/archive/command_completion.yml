@@ -2,6 +2,10 @@
 # task file to configure bash completion for gcloud
 - name: gcloud | Archive | Debian | Ensure bash completion is installed
   apt: name=bash-completion
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
   when: ansible_os_family == "Debian"
 
 - name: gcloud | Archive | RedHat | Ensure bash completion is installed
@@ -9,6 +13,10 @@
     name:
       - bash-completion
       - bash-completion-extras
+  register: task_result
+  until: task_result is success
+  retries: 10
+  delay: 2
   when: ansible_os_family == "RedHat"
 
 - name: gcloud | Archive | Ensure bash_completion.d directory exists

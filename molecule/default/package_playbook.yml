@@ -6,4 +6,5 @@
       apt: name=gnupg2
       when: ansible_os_family|lower == "debian"
   roles:
+    - role: ericsysmin.epel
     - role: ericsysmin.gcloud
