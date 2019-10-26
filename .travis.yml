@@ -23,7 +23,9 @@ env:
     - MOLECULE_DISTRO: ubuntu:bionic
     - MOLECULE_DISTRO: ubuntu:bionic
       MOLECULE_PLAYBOOK: archive_playbook.yml
-
+    - MOLECULE_DISTRO: centos:7
+    - MOLECULE_DISTRO: centos:7
+      MOLECULE_PLAYBOOK: archive_playbook.yml
 install:
   - pip install testinfra molecule docker
 
