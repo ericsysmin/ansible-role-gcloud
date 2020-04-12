@@ -28,7 +28,7 @@
 
 - name: gcloud | Archive | Install into Path
   command: >-
-    {{ gcloud_archive_path }}/install.sh --quiet
+    {{ gcloud_library_path }}/install.sh --quiet
     --usage-reporting {{ gcloud_usage_reporting | lower }}
     {% if gcloud_profile_path %}
       --rc-path {{ gcloud_profile_path }}
