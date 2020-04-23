@@ -1,6 +1,6 @@
 # ericsysmin.gcloud
 
-[![Build Status](https://travis-ci.org/ericsysmin/ansible-role-gcloud.svg?branch=master)](https://travis-ci.org/ericsysmin/ansible-role-gcloud)
+[![Build Status](https://travis-ci.com/ericsysmin/ansible-role-gcloud.svg?branch=master)](https://travis-ci.com/ericsysmin/ansible-role-gcloud)
 
 This role installs the gcloud command-line tool on a linux system.
 
