@@ -32,4 +32,6 @@
 
 - name: gcloud | Debian | Install the google-cloud-sdk additional components # noqa 301
   command: gcloud components install {{ item }}
+  register: gcloud_install_comp_status
+  changed_when: "'All components are up to date.' not in '{{ gcloud_install_comp_status.stderr_lines }}'"
   loop: "{{ gcloud_additional_components }}"
