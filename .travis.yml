@@ -26,8 +26,11 @@ env:
     - MOLECULE_DISTRO: centos:7
     - MOLECULE_DISTRO: centos:7
       MOLECULE_PLAYBOOK: archive_playbook.yml
+
+jobs:
+  fast_finish: true
 install:
-  - pip install testinfra molecule docker
+  - pip install molecule yamllint ansible-lint docker
 
 before_script:
   - cd ../
