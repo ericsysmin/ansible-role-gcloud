@@ -4,10 +4,10 @@ dependency:
   requirements_file: molecule/default/requirements.yml
 driver:
   name: docker
-lint:
-  name: yamllint
-  options:
-    config-file: molecule/default/.yamllint
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
 platforms:
   - name: instance
     image: ${MOLECULE_DISTRO:-ubuntu:bionic}
@@ -16,15 +16,5 @@ platforms:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
 provisioner:
   name: ansible
-  lint:
-    name: ansible-lint
-    options:
-      c: molecule/default/.ansible-lint
   playbooks:
     converge: ${MOLECULE_PLAYBOOK:-package_playbook.yml}
-scenario:
-  name: default
-verifier:
-  name: testinfra
-  lint:
-    name: flake8

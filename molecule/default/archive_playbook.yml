@@ -10,3 +10,5 @@
     - role: ericsysmin.gcloud
       gcloud_install_type: archive
       gcloud_command_completion: true
+      gcloud_additional_components:
+        - cloud-build-local

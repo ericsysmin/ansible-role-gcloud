@@ -29,3 +29,7 @@
   include_tasks: archive_install.yml
   when: gcloud_installed_version is undefined or
         gcloud_version is version(gcloud_installed_version, '>')
+
+- name: gcloud | Debian | Install the google-cloud-sdk additional components
+  command: gcloud components install {{ item }}
+  loop: "{{ gcloud_additional_components }}"

@@ -8,3 +8,5 @@
   roles:
     - role: ericsysmin.epel
     - role: ericsysmin.gcloud
+      gcloud_additional_components:
+        - cloud-build-local
