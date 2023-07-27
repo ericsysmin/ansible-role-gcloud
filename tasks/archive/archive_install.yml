@@ -7,7 +7,6 @@
     src: "{{ gcloud_archive_url }}"
     dest: "{{ gcloud_archive_path }}"
     remote_src: yes
-    creates: "{{ gcloud_library_path }}"
 
 - name: gcloud | Archive | Link binaries to /usr/bin (like package install)
   file:
