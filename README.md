@@ -1,4 +1,5 @@
-# ericsysmin.gcloud
+# ericsysmin.gcloud (Archived - No Longer Maintained)
+# PLEASE VISIT https://github.com/ansible-collections/google.cloud
 
 [![Build Status](https://travis-ci.com/ericsysmin/ansible-role-gcloud.svg?branch=master)](https://travis-ci.com/ericsysmin/ansible-role-gcloud)
 
